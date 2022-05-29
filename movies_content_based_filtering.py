@@ -6,7 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 
 def get_movie_ratings(movies: dict):
-    ratings = pd.read_csv('ml-latest-small/ratings.csv')
+    ratings = pd.read_csv('dataset/ratings.csv')
 
     # extracting ratings for movies and storing in the movie dictionary
     for item, row in ratings.iterrows():
@@ -52,7 +52,7 @@ def get_movie_recommendation(movies: dict):
 
 
 def format_tags(movies: dict):
-    tags = pd.read_csv('ml-latest-small/tags.csv')
+    tags = pd.read_csv('dataset/tags.csv')
 
     # adding tags from tags.csv into each movie's tags
     for item, row in tags.iterrows():
@@ -71,7 +71,7 @@ def format_tags(movies: dict):
 
 
 def get_movie_data(movies: dict):
-    items = pd.read_csv('ml-latest-small/movies.csv')
+    items = pd.read_csv('dataset/movies.csv')
 
     for index, row in items.iterrows():
         # extracting release year of movie from title
