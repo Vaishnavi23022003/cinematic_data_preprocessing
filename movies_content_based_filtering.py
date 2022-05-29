@@ -15,6 +15,7 @@ def get_movie_ratings(movies: dict):
 
 
 def get_movie_recommendation(movies: dict):
+    # content based based filtering
     data_matrix = {
         "movieId": [movie for movie in movies],
         "tags": [movies[movie]["tags"] for movie in movies],
@@ -111,4 +112,4 @@ get_movie_ratings(movies_data)
 
 # create_json(movies_data, "movies_data")
 print(movies_data[1])
-# content based , popularity
+
